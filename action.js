@@ -5,7 +5,7 @@ https.get("https://www.khanacademy.org/api/internal/scratchpads/top?casing=camel
   res => {
     let chunks = "";
     
-    res.on("data", (ata => {
+    res.on("data", data => {
       chunks += data;
     });
     
