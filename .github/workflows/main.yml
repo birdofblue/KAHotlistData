@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Update
 
 # Controls when the action will run. 
 on:
@@ -19,10 +19,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run Node Script
-        run: echo Hello, world!
+        run: node action.js
         
       - name: Git set username
-        run: git config --global user.name ${GITHUB_ACTOR}
+        run: git config --global user.name "${GITHUB_ACTOR}"
         
       - name: Git add
         run: git add .
